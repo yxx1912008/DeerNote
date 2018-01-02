@@ -1,4 +1,8 @@
 /**app.wxss**/
+
+/** 引入有赞UI */
+@import "./static/index.wxss";
+
 .container {
   height: 100%;
   display: flex;
@@ -7,4 +11,4 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
