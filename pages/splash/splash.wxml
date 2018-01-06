@@ -1,4 +1,0 @@
-<!-- 启动图 -->
-<image id="splash" src="/static/img/splash.jpg" style='height:{{screenHeight}}px;width:{{screenWidth}}px;'></image>
-<view id='body'>
-</view>

@@ -1,5 +1,0 @@
-/* 类似于body */
-page {
-  height: 100vh;
-  background-color: #ddd;
-}
