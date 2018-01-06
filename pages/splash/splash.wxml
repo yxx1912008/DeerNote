@@ -1,0 +1,5 @@
+<view id='body'>
+  
+  <image id="splash" src="/static/img/splash.jpg"></image>
+
+</view>

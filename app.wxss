@@ -1,7 +1,7 @@
 /**app.wxss**/
 
 /** 引入有赞UI */
-@import "./static/index.wxss";
+@import "./static/zanUI/index.wxss";
 
 .container {
   height: 100%;
