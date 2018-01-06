@@ -9,6 +9,12 @@ Page({
    */
   data: {
 
+    // 屏幕初始高度
+    screenHeight: 0,
+    // 屏幕初始宽度
+    screenWidth: 0,
+    /**启动图显示时长 单位毫秒 */
+    splashTime: 3000
   },
 
   /**
@@ -16,7 +22,17 @@ Page({
    */
   onLoad: function (options) {
 
-console.log('xxx');
+    // 闭包
+    var that = this;
+    /** 根据当前系统屏幕宽高，设置启动图 */
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          screenHeight: res.windowHeight,
+          screenWidth: res.windowWidth
+        });
+      },
+    });
 
   },
 
@@ -24,7 +40,8 @@ console.log('xxx');
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    /** 初次渲染完成，停留两秒跳转到主页 */
+    this.getIndex();
   },
 
   /**
@@ -67,5 +84,17 @@ console.log('xxx');
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  /**
+   * 启动图显示完毕后跳到主页
+   */
+  getIndex: function () {
+    setTimeout(function () {
+      wx.redirectTo({
+        url: '../index/index',
+      })
+    }, this.data.splashTime);
+  },
+
 })
